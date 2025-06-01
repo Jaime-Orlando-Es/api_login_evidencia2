@@ -1,0 +1,15 @@
+1. Endpoint: /register.php
+   Método: POST
+   Descripción: Permite registrar un nuevo usuario.
+   Parámetros:
+     - usuario (string)
+     - contrasena (string)
+   Formato: x-www-form-urlencoded
+
+2. Endpoint: /login.php
+   Método: POST
+   Descripción: Permite autenticar un usuario existente.
+   Parámetros:
+     - usuario (string)
+     - contrasena (string)
+   Formato: x-www-form-urlencoded
