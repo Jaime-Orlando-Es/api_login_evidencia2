@@ -3,10 +3,16 @@
 
 // Parámetros de conexión a la base de datos
 $host = '127.0.0.1';
-$port = 3306;
+$port = 8889;
 $db = 'api_usuarios';
 $user = 'root';
 $pass = 'JE5628'; 
+
+$conexion = new PDO(
+    "mysql:host=localhost;dbname=api_usuarios;port=8889;unix_socket=/Applications/MAMP/tmp/mysql/mysql.sock",
+    'root',
+    'JE5628'
+);
 
 try {
     // Crear conexión PDO

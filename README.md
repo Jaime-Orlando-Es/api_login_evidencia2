@@ -1,51 +1,52 @@
-# Proyecto: Servicio Web - Registro e Inicio de Sesión
+# API Registro/Login - PHP + MySQL
 
-# Evidencia de desempeño
-GA7-220501096-AA5-EV01 - Diseño y desarrollo de servicios web - caso
+Este proyecto es una API sencilla desarrollada en PHP que permite el registro y autenticación de usuarios, utilizando MySQL como base de datos.
 
-# Descripción
-Este proyecto implementa un servicio web en PHP que permite:
-- Registrar usuarios en una base de datos.
-- Iniciar sesión verificando el usuario y contraseña (con `password_hash` y `password_verify`).
-- Devolver mensajes de éxito o error según el resultado.
+# Funcionalidades
+	•	Registro de usuario con contraseña encriptada (password_hash)
+	•	Autenticación de usuario con validación segura (password_verify)
+	•	Respuestas en formato JSON
 
-# Tecnologías
-- PHP
-- MySQL (MAMP)
-- Postman para pruebas
-- Terminal de MacOs
-- Git (versionamiento)
+# Herramientas utilizadas
+	•	PHP 8
+	•	MySQL (vía MAMP)
+	•	MAMP como entorno de servidor local
+	•	Postman para pruebas de endpoints
+	•	Terminal para verificación directa con comandos MySQL
 
-# Estructura del proyecto
-- `config.php`: conexión a base de datos MySQL local
-- `register.php`: script para registrar nuevos usuarios
-- `login.php`: script para autenticar usuarios registrados
+# Conexión a base de datos
 
-# Base de datos
-- Nombre: `api_usuarios`
-- Tabla: `usuarios`  
-  Estructura:
-  - `id`: int, AUTO_INCREMENT, PRIMARY KEY
-  - `usuario`: varchar(50), UNIQUE
-  - `contrasena`: varchar(255)
+Parámetros utilizados:
+	•	Host: 127.0.0.1
+	•	Puerto: 8889
+	•	Usuario: root
+	•	Contraseña: JE5628
+	•	Base de datos: api_usuarios
 
-# Datos de prueba
-- Usuario: jaime  
-- Contraseña: 123456
+# Estructura de archivos
+	•	config.php → conexión a la base de datos
+	•	register.php → registro de usuario
+	•	login.php → autenticación de usuario
 
-# URLs para pruebas (en Postman)
-- Registro: `http://localhost:8888/Api-login/register.php`
-- Login: `http://localhost:8888/Api-login/login.php`
+# Cómo probar
 
-# Requisitos
-- MAMP instalado y corriendo
-- Proyecto ubicado en: `/Applications/MAMP/htdocs/Api-login/`
-- Base de datos importada desde `api_usuarios.sql`
+Usa Postman en modo x-www-form-urlencoded:
+	•	POST a /register.php
+	•	usuario: tu_usuario
+	•	contrasena: tu_clave
+	•	POST a /login.php
+	•	usuario: tu_usuario
+	•	contrasena: tu_clave
 
-# Autor
-Jaime Orlando Estupiñán
-Ficha: 2834913
 
-ANALISIS Y DESARROLLO DE SOFTWARE 
+Este proyecto fue realizado como parte de una evidencia de aprendizaje sobre servicios web.
+
+# autor 
+Jaime Orlando Estupiñan 
+
+# ficha
+2834913
+
+ANALISIS Y DESARROLLO DE SOFTWARE
 SENA
 2025
